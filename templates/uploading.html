@@ -1,0 +1,31 @@
+{% extends "segmented_layout.html" %}
+{% block extra_header %}
+{% endblock %}
+{% block segmented_content %}
+
+<div class="jumbotron-uhai jumbotron-uhai-content">
+    <h4 class="uppercase">Uploading...</h4>
+    <hr align="center">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p style="text-align: center;">Your image is being uploaded and analyzed...</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+{% block extra_script %}
+<script>
+    window.setTimeout( function(){
+         window.location = "/history";
+     }, 60000 );
+</script>
+{% endblock %}
